@@ -49,11 +49,12 @@ const CreditsCard = props => {
 };
 
 class Credits extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
     
         this.state = {
             credits: [],
+            credittotal: 0,
             isError: false
         }
       }
@@ -69,13 +70,34 @@ class Credits extends Component {
 						date: item.date
 					};
 				});
-				this.setState({ credits: newCreditsArr, isError: false });
+				this.setState({ credits: newCreditsArr, isError: false }, this.CreditAdder(newCreditsArr));
             })
             .then(console.log(this.state.debits))
 			.catch(err => {
-				this.setState({ isError: true, newDebitsArr: [] });
+				this.setState({ isError: true, newCreditsArr: [] });
 			});
-	}
+    }
+
+CreditAdder = (newCreditsArr) => {
+    const totalCredArr = newCreditsArr.map((item) => {
+            console.log(item.amount);
+            return item.amount
+        });
+    
+    let totalcred = 0;
+    for(let i = 0; i < totalCredArr.length; i++){
+        totalcred += totalCredArr[i];
+    }
+    console.log(totalcred);
+
+    this.setState({
+        credittotal: totalcred
+    })
+
+    console.log(this.state.credittotal)
+
+}
+
 
 
   render() {
@@ -93,6 +115,10 @@ class Credits extends Component {
         <Link to="/">Home</Link>
 
         <h1>Credits!</h1>
+        <div className2="total">
+            <h3>Total</h3>
+            <p>{this.state.credittotal}</p>
+        </div>
 
         <AccountBalance accountBalance={this.props.accountBalance}/>
 
