@@ -7,6 +7,7 @@ import UserProfile from './components/UserProfile';
 import LogIn from './components/Login';
 import Debits from './components/Debits';
 import Credits from './components/Credits';
+import AccountBalance from './components/AccountBalance';
 
 class App extends Component {
 
@@ -14,7 +15,7 @@ class App extends Component {
     super();
 
     this.state = {
-      accountBalance: 14568.27,
+      accountBalance: -515.88,
       currentUser: {
         userName: 'bob_loblaw',
         memberSince: '08/23/99',
@@ -41,6 +42,8 @@ class App extends Component {
 
     const CreditsComponent = () => (<Credits/>)
 
+    const ABComponent = () => (<AccountBalance accountBalance={this.state.accountBalance}/>)
+
     return (
         <Router>
           <div>
@@ -49,6 +52,7 @@ class App extends Component {
             <Route exact path="/login" render={LogInComponent}/>
             <Route exact path="/debits" render={DebitsComponent}/>
             <Route exact path="/credits" render={CreditsComponent}/>
+            <Route exact path="/accountbalance" render={ABComponent}/>
           </div>
         </Router>
     );

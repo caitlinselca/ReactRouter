@@ -7,7 +7,7 @@ class UserProfile extends Component {
   render() {
     return (
         <div>
-            <Link to="/">User Profile</Link>
+            <Link to="/">Home</Link>
 
           <h1>User Profile</h1>
 

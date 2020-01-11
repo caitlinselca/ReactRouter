@@ -1,7 +1,6 @@
 // src/components/UserProfile.js
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import AccountBalance from './AccountBalance';
 import axios from "axios";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -114,13 +113,13 @@ CreditAdder = (newCreditsArr) => {
         <div>
         <Link to="/">Home</Link>
 
-        <h1>Credits!</h1>
+        <h1>Credits</h1>
         <div className2="total">
             <h3>Total</h3>
             <p>{this.state.credittotal}</p>
         </div>
 
-        <AccountBalance accountBalance={this.props.accountBalance}/>
+        <button><Link to="/AccountBalance">Click for Account Balance</Link></button>
 
         {this.state.isError ? <h2> No Results </h2> : ""}
 		<div className="cards-container">{CreditCards}</div>
