@@ -47,3 +47,47 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.title {
+  background-color: gray;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font: 35px copperplate;
+  color: white;
+}
+
+.buttons {
+  margin-left: 100px;
+  background-color: pink;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+  color: black;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font: 35px calabria;
+  color: blue;
+}
+
+.heading1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font: 20px copperplate;
+  color: black;
+}

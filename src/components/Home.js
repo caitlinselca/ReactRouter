@@ -6,17 +6,17 @@ class Home extends Component {
     return (
         <div>
           <img src="https://letstalkpayments.com/wp-content/uploads/2016/04/Bank.png" alt="bank"/>
-          <h1>Bank of React</h1>
+          <h1 className="title">Bank of React</h1>
 
-          <div> <Link to="/LogIn">Login</Link> </div>
+          <button className= "buttons"><div> <Link to="/LogIn">Login</Link> </div></button>
 
-          <div> <Link to="/userProfile">User Profile</Link> </div>
+          <button className= "buttons"><div> <Link to="/userProfile">User Profile</Link> </div></button>
 
-          <div> <Link to="/Debits">Debits</Link> </div>
+          <button className= "buttons"><div> <Link to="/Debits">Debits</Link> </div></button>
 
-          <div> <Link to="/Credits">Credits</Link> </div>
+          <button className= "buttons"><div> <Link to="/Credits">Credits</Link> </div></button>
 
-          <div> <Link to="/AccountBalance">Account Balance</Link> </div>
+          <button className= "buttons"><div> <Link to="/AccountBalance">Account Balance</Link> </div></button>
 
         </div>
     );

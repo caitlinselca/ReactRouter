@@ -7,9 +7,9 @@ class AccountBalance extends Component {
   render() {
     return (
         <div>
-        <Link to="/">Home</Link>
-        <h1>Balance</h1>
-          Balance: {this.props.accountBalance}
+        <h1 className="title"><Link to="/">Home</Link></h1>
+        <h1 className="heading">Balance</h1>
+        <h1 className="heading1">Balance: {this.props.accountBalance}</h1>
         </div>
     );
   }

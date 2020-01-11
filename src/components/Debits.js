@@ -109,15 +109,15 @@ class Debits extends Component {
 
     return (
         <div>
-        <Link to="/">Home</Link>
+        <h1 className="title"><Link to="/">Home</Link></h1>
 
-        <h1>Debits</h1>
-        <div className="total">
+        <h1 className="heading">Debits</h1>
+        <div className="heading1">
             <h3>Total</h3>
             <p>{this.state.total}</p>
         </div>
 
-        <button><Link to="/AccountBalance">Click for Account Balance</Link></button>
+        <button className="buttons"><Link to="/AccountBalance">Click for Account Balance</Link></button>
 
         {this.state.isError ? <h2> No Results </h2> : ""}
 		<div className="cards-container">{Cards}</div>
